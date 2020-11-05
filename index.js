@@ -64,12 +64,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(){
-  if (originalFlavors.length === 31){
-      return "true";
-  }
-  if (originalFlavors.length !== 31){
-      return "false";
+function is31Flavors(arr){
+   /* console.log(arr.length,"this is popping off");*/
+  if (arr.length === 31){
+      return true;
+  }else {
+      return false;
   }
   
 }
@@ -109,12 +109,12 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(){
-   originalFlavors.pop();
-   console.log(originalFlavors);
-    return originalFlavors;
+function removeLastFlavor(arr){
+   arr.pop();
+   console.log(arr);
+    return arr;
 }
-console.log(originalFlavors);
+console.log(originalFlavors.pop);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -127,10 +127,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(originalFlavors){
-    return getFlavorByIndex(originalFlavors, 2);
+function getFlavorByIndex(arrIndex, item){
+    return getFlavorByIndex(arrIndex, 2);
 }
-console.log(originalFlavors);
+console.log(originalFlavors(arrIndex,2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -145,11 +145,11 @@ Use the removeFlavorByName function below to do the following:
 
     HINT: You can use .splice() for this
 */
-let removeFlavor = "Rocky Road";
-function removeFlavorByName(originalFlavors, removeFlavor){
-    originalFlavors.splice("Rocky Road");
+
+function removeFlavorByName(arrRemove, "Banana Nut Fudge"){
+    arrRemove.splice(0, 0);
 }
-removeFlavorByName(originalFlavors, "Rocky Road");
+removeFlavorByName(originalFlavors, "Banana Nut Fudge");
 
 
 
