@@ -49,7 +49,7 @@ function copy(originalFlavors){
     return [...originalFlavors];
 }    
 
-console.log(originalFlavors);
+//console.log(originalFlavors);
 
 
 
@@ -88,10 +88,10 @@ Use the addFlavor function below to do the following:
 */
 
 let newFlavor = "Rainbow Sherbert"
-function addFlavor(originalFlavors, newFlavor){
-  newFlavor = originalFlavors.unshift("Rainbow Sherbert");
-  console.log(originalFlavors);
-  return originalFlavors;
+function addFlavor(arr, newFlavor){
+  newFlavor = arr.unshift("Rainbow Sherbert");
+  //console.log(originalFlavors);
+  return arr;
   
 }
 
@@ -111,10 +111,10 @@ Use the removeLastFlavor function below to do the following:
 
 function removeLastFlavor(arr){
    arr.pop();
-   console.log(arr);
+   //console.log(arr);
     return arr;
 }
-console.log(originalFlavors.pop);
+//console.log(originalFlavors.pop);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -127,10 +127,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(arrIndex, item){
-    return getFlavorByIndex(arrIndex, 2);
+function getFlavorByIndex(arr, index){
+    return arr[index];
 }
-console.log(originalFlavors(arrIndex,2));
+//console.log(getFlavorByIndex(originalFlavors,2));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -146,10 +146,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(arrRemove, "Banana Nut Fudge"){
-    arrRemove.splice(0, 0);
+function removeFlavorByName(array, string){
+    const index = array.indexOf(string);
+    array.splice(index,1);
+    return array;
 }
-removeFlavorByName(originalFlavors, "Banana Nut Fudge");
+removeFlavorByName(originalFlavors, "Rocky Road");
+
+//log.console(removeFlavorByName(originalFlavors, "Banana Nut Fudge"));
 
 
 
@@ -172,9 +176,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, string){
+    const newArray = []
+    for (let i = 0; i < array.length; i++){
+        if (array[i].includes(string)){
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
 }
+filterByWord(originalFlavors, "Chocolate");
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
